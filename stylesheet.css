@@ -1,28 +1,64 @@
 *{
-  background-color: black;
   font-size: 40px
 }
 
-*:hover{
-  background-color: white
+
+#hint1{
+  visibility: hidden;
 }
 
-.title{
-  background-color: black;
-  color: yellow;
+#hint2{
+  z-index: 0;
 }
 
-
-.hint1{
-  background-color: black;
-}
-
-.hint1:active{
-  background-color: white;
-}
-
-.hint2{
+#hint3{
+  width: auto;
   color: red;
+  background-color: white;
+  border: solid 5px;
+  border-radius: 5px;
+  box-sizing:border-box;
+  position: fixed;
+  display: block;
+  left: 100px;
+  top: 275px;
+  margin: auto;
+  z-index: 1;
+  visibility: hidden;
+}
 
+#clear{
+  width: auto;
+  color: green;
+  background-color: white;
+  border: solid 5px;
+  border-radius: 5px;
+  box-sizing:border-box;
+  position: fixed;
+  display: block;
+  left: 20%;
+  z-index: 2;
+  visibility: hidden;
+}
 
+#hint1 span:nth-child(3n){
+  color: red;
+}
+#hint1 span:nth-child(3n+1){
+  color: green;
+}
+#hint1 span:nth-child(3n+2){
+  color: blue;
+}
+
+#title:active + #hint1{
+  visibility: visible;
+}
+
+#chi:active > #hint3{
+  visibility: visible;
+}
+
+#sa:active > #clear{
+  visibility: visible;
 }
